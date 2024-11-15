@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ html {
     --color2: #f1ef57bd;
     --color3: #00EFEE;
     --color4: #77d3c4;
-    --color5: #77d3c4;
+    --color5: #5bc1b0;
 }
 
 h1, h2, p, a, button {
@@ -117,4 +118,18 @@ footer{
     background-color: var(--color1);
     border-top: 2px solid var(--color3);
     color: white;
+}
+
+/* Animation pour le scintillement */
+@keyframes scintillement {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+#indice:hover h2, #indice:hover p {
+    animation: scintillement 0.5s infinite;
 }
